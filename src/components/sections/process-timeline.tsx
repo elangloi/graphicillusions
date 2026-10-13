@@ -53,11 +53,15 @@ export function ProcessTimeline({ steps }: { steps: TimelineStep[] }) {
 
 export function RoleChips({ weHandle, yourRole }: { weHandle: string; yourRole: string }) {
   return (
-    <dl className="m-0 flex flex-wrap items-center gap-2 text-sm">
-      <dt className="bg-brand-gradient rounded-full px-3 py-1 text-[13px] font-semibold text-white">We handle</dt>
-      <dd className="m-0 mr-2">{weHandle}</dd>
-      <dt className="rounded-full border border-border-strong px-3 py-1 text-[13px] font-semibold text-[#d3e0ee]">Your role</dt>
-      <dd className="m-0">{yourRole}</dd>
+    <dl className="m-0 flex flex-col gap-2.5 text-sm">
+      <div className="flex flex-wrap items-center gap-2">
+        <dt className="bg-brand-gradient rounded-full px-3 py-1 text-[13px] font-semibold text-white">We handle</dt>
+        <dd className="m-0">{weHandle}</dd>
+      </div>
+      <div className="flex flex-wrap items-center gap-2">
+        <dt className="rounded-full border border-border-strong px-3 py-1 text-[13px] font-semibold text-[#d3e0ee]">Your role</dt>
+        <dd className="m-0">{yourRole}</dd>
+      </div>
     </dl>
   )
 }
