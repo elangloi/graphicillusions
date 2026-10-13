@@ -29,7 +29,8 @@ const template = readFileSync(join(dist, 'index.html'), 'utf8')
 function page(meta: PageMeta, url: string): string {
   // React emits resource hints (e.g. image preloads) ahead of the app markup.
   // They belong in <head>; left inside #root they break hydration.
-  const rendered = server.render(url, base)
+  // The router sees the full path, so prefix the base (e.g. /graphicillusions/work).
+  const rendered = server.render(`${base.replace(/\/$/, '')}${url}`, base)
   const hints = rendered.match(/^(?:<link [^>]*\/>)*/)?.[0] ?? ''
   return template
     .replace(/<!--head-tags-->[\s\S]*<!--\/head-tags-->/, `${server.headTags(meta)}\n    ${hints}`)

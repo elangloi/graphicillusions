@@ -18,7 +18,11 @@ pnpm build      # typecheck, client + SSR build, prerender into dist/
 pnpm preview    # serve dist/
 ```
 
-Set `BASE_PATH=/graphicillusions/` when building for a GitHub Pages project URL instead of the custom domain.
+## Deployment
+
+Every push to `main` runs `.github/workflows/deploy.yml`: tests, a production build and a deploy to GitHub Pages
+at https://elangloi.github.io/graphicillusions/. That build sets `BASE_PATH=/graphicillusions/`; once the
+graphicillusions.com domain is pointed at Pages, change it to `/`.
 
 ## Where things live
 
