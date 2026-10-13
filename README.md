@@ -4,7 +4,7 @@ The rebuilt graphicillusions.com: a dark, mobile-first site in the logo's blue/p
 "Graphic Illusions Redesign" mocks (corporate variant).
 
 - **Stack:** Vite + React 19 + TypeScript, Tailwind CSS v4, shadcn/ui (Radix), React Router, Vitest + Testing Library.
-- **Pages:** `/` corporate programs, `/how-it-works` rollout process, `/work` searchable gallery, `/local-shop` family shop.
+- **Pages:** `/` corporate programs, `/how-it-works` rollout process, `/work` searchable gallery.
 - **SEO:** every page is prerendered to static HTML at build time with its own title, description, canonical URL,
   Open Graph tags and LocalBusiness JSON-LD; the build also writes `sitemap.xml`, `robots.txt` and `404.html`.
 

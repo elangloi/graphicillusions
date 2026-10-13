@@ -8,8 +8,8 @@ export const site = {
   url: 'https://graphicillusions.com',
   phone: '443-790-2580',
   phoneHref: 'tel:+14437902580',
-  /** No public email yet; "Email us" buttons stay hidden until this is set. */
-  email: null as string | null,
+  /** Set to null to hide the "Email us" buttons. */
+  email: 'andy@graphicillusions.com' as string | null,
   address: {
     street: '786 Olivia Way',
     city: 'Pasadena',
@@ -28,7 +28,6 @@ export const mainNav: NavItem[] = [
   { label: 'Corporate programs', to: '/' },
   { label: 'How it works', to: '/how-it-works' },
   { label: 'Our work', to: '/work' },
-  { label: 'Local shop', to: '/local-shop' },
 ]
 
 export const primaryCta: NavItem = { label: 'Plan a rollout', to: '/#contact' }

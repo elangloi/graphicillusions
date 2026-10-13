@@ -26,21 +26,15 @@ export const pages = {
     description:
       'Search our gallery of custom signs, channel letters, carved and CNC signs, vehicle wraps, boat lettering, laser engraving and digital graphics.',
   },
-  localShop: {
-    path: '/local-shop',
-    title: 'Custom Signs in Pasadena, MD | Graphic Illusions Local Shop',
-    description:
-      'Family-owned sign shop in Pasadena, Maryland: carved and CNC signs, channel letters, vehicle wraps, boat lettering, laser engraving and digital graphics, made in-house for over 30 years.',
-  },
   notFound: {
     path: '/404',
     title: 'Page not found | Graphic Illusions',
-    description: 'That page does not exist. Browse our corporate sign programs, local shop or gallery of work.',
+    description: 'That page does not exist. Browse our corporate sign programs, how a rollout works or our gallery of work.',
   },
 } satisfies Record<string, PageMeta>
 
 /** Pages that get their own prerendered HTML file and a sitemap entry. */
-export const indexablePages: PageMeta[] = [pages.home, pages.howItWorks, pages.work, pages.localShop]
+export const indexablePages: PageMeta[] = [pages.home, pages.howItWorks, pages.work]
 
 export function canonicalUrl(path: string): string {
   return `${site.url}${path === '/' ? '/' : path}`
@@ -55,6 +49,7 @@ export function localBusinessJsonLd() {
     name: site.legalName,
     url: site.url,
     telephone: `+1-${site.phone}`,
+    ...(site.email ? { email: site.email } : {}),
     image: `${site.url}/og-logo.png`,
     logo: `${site.url}/og-logo.png`,
     description: pages.home.description,

@@ -1,6 +1,7 @@
 import { cva, type VariantProps } from 'class-variance-authority'
 import { cn } from 'cn'
 
+import { site } from '@/content/site'
 import { ContactActions } from './contact-actions'
 
 const ctaPanelVariants = cva(
@@ -29,6 +30,14 @@ export function CtaPanel({ title, children, variant, className }: CtaPanelProps)
       <h2 className="max-w-[760px] text-2xl leading-tight sm:text-[32px]">{title}</h2>
       {children && <p className="m-0 max-w-[620px] text-lg text-soft">{children}</p>}
       <ContactActions align="center" />
+      {site.email && (
+        <p className="m-0 text-soft">
+          Or write to{' '}
+          <a href={`mailto:${site.email}`} className="font-semibold text-sky underline-offset-4 hover:underline">
+            {site.email}
+          </a>
+        </p>
+      )}
     </div>
   )
 }
