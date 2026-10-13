@@ -70,7 +70,7 @@ export function CorporateHome() {
             </p>
             <div className="flex flex-wrap gap-3">
               <Button asChild>
-                <Link to="#contact">Plan a rollout</Link>
+                <Link to="/#contact">Contact us</Link>
               </Button>
               <Button asChild variant="outline">
                 <Link to="/how-it-works">See how it works</Link>

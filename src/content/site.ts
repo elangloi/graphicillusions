@@ -30,4 +30,4 @@ export const mainNav: NavItem[] = [
   { label: 'Our work', to: '/work' },
 ]
 
-export const primaryCta: NavItem = { label: 'Plan a rollout', to: '/#contact' }
+export const primaryCta: NavItem = { label: 'Contact us', to: '/#contact' }

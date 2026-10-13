@@ -1,6 +1,6 @@
-import { screen, within } from '@testing-library/react'
+import { screen, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { describe, expect, it } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 
 import { renderAt } from '@/test/render'
 
@@ -19,5 +19,21 @@ describe('site header', () => {
     await userEvent.click(within(menu).getByRole('link', { name: 'Our work' }))
     expect(screen.getByRole('heading', { level: 1, name: 'Our work' })).toBeInTheDocument()
     expect(screen.queryByRole('navigation', { name: 'Mobile' })).not.toBeInTheDocument()
+  })
+})
+
+describe('contact us link', () => {
+  it('scrolls to the contact section on every click, from any page', async () => {
+    const spy = vi.spyOn(Element.prototype, 'scrollIntoView')
+    renderAt('/how-it-works')
+    const link = within(screen.getByRole('navigation', { name: 'Main' })).getByRole('link', { name: 'Contact us' })
+
+    await userEvent.click(link)
+    await waitFor(() => expect(spy).toHaveBeenCalledTimes(1))
+    expect(spy.mock.contexts[0]).toHaveProperty('id', 'contact')
+
+    await userEvent.click(link)
+    await waitFor(() => expect(spy).toHaveBeenCalledTimes(2))
+    spy.mockRestore()
   })
 })
