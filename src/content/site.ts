@@ -8,7 +8,7 @@ export const site = {
   url: 'https://graphicillusions.com',
   phone: '443-790-2580',
   phoneHref: 'tel:+14437902580',
-  /** Set to null to hide the "Email us" buttons. */
+  /** Shown as an "Or write to" link in contact sections; null hides it. */
   email: 'andy@graphicillusions.com' as string | null,
   address: {
     street: '786 Olivia Way',

@@ -8,8 +8,8 @@ describe('corporate home contact section', () => {
     const { container } = renderAt('/')
     const contact = container.querySelector<HTMLElement>('#contact')!
     expect(within(contact).getByRole('link', { name: 'Call 443-790-2580' })).toHaveAttribute('href', 'tel:+14437902580')
-    expect(within(contact).getByRole('link', { name: 'Email us' })).toHaveAttribute('href', 'mailto:andy@graphicillusions.com')
-    expect(within(contact).getByRole('link', { name: 'andy@graphicillusions.com' })).toBeInTheDocument()
+    expect(within(contact).getByRole('link', { name: 'andy@graphicillusions.com' })).toHaveAttribute('href', 'mailto:andy@graphicillusions.com')
+    expect(within(contact).queryByRole('link', { name: 'Email us' })).not.toBeInTheDocument()
   })
 
   it('no longer links to a local shop page', () => {
