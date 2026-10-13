@@ -10,7 +10,7 @@ const ctaPanelVariants = cva(
     variants: {
       variant: {
         muted: 'border border-border bg-muted',
-        gradient: 'border-gradient border-2 border-transparent',
+        gradient: 'gradient-rim border-2 border-transparent',
       },
     },
     defaultVariants: { variant: 'muted' },

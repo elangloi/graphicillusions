@@ -19,7 +19,7 @@ export function FlowSteps({ steps }: { steps: FlowStep[] }) {
             variant === 'default' && '[&_svg]:text-sky',
             variant === 'muted' && 'border-dashed border-[#4a5f7a] [&_svg]:text-dim',
             variant === 'highlight' &&
-              'border-gradient border-2 border-transparent [--gb-fill:linear-gradient(#0f2440,var(--card))] [&_svg]:text-ice',
+              'gradient-rim border-2 border-transparent [--gb-fill:linear-gradient(#0f2440,var(--card))] [&_svg]:text-ice',
           )}
         >
           <span aria-hidden="true">{icon}</span>

@@ -22,7 +22,7 @@ Set `BASE_PATH=/graphicillusions/` when building for a GitHub Pages project URL 
 
 ## Where things live
 
-- `src/index.css` – brand tokens (colors, fonts, gradients) and utilities like `text-gradient`, `border-gradient`.
+- `src/index.css` – brand tokens (colors, fonts, gradients) and utilities like `text-gradient`, `gradient-rim`.
 - `src/components/ui` – shadcn primitives (Button is restyled to the brand pill buttons).
 - `src/components/brand`, `layout`, `sections`, `gallery` – reusable site components.
 - `src/content/site.ts` – phone, address, email, nav. `src/content/gallery.ts` – gallery projects.

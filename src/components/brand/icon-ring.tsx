@@ -2,7 +2,7 @@ import { cva, type VariantProps } from 'class-variance-authority'
 import { cn } from 'cn'
 
 const iconRingVariants = cva(
-  'border-gradient relative z-[1] flex flex-none items-center justify-center rounded-full border-2 border-transparent text-ice',
+  'gradient-rim relative z-[1] flex flex-none items-center justify-center rounded-full border-2 border-transparent text-ice',
   {
     variants: {
       size: {

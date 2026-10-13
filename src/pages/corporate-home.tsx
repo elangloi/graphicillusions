@@ -109,7 +109,7 @@ export function CorporateHome() {
       </Section>
 
       <Section>
-        <div className="border-gradient grid grid-cols-[repeat(auto-fit,minmax(min(460px,100%),1fr))] items-start gap-12 rounded-3xl border-2 border-transparent p-6 sm:p-12">
+        <div className="gradient-rim grid grid-cols-[repeat(auto-fit,minmax(min(460px,100%),1fr))] items-start gap-12 rounded-3xl border-2 border-transparent p-6 sm:p-12">
           <div className="flex flex-col gap-4">
             <Eyebrow>The home shop advantage</Eyebrow>
             <h2 className="text-2xl leading-[1.2] sm:text-[30px]">A real shop behind every subcontractor.</h2>

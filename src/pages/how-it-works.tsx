@@ -83,8 +83,8 @@ export function HowItWorks() {
           </>
         }
       >
-        The same idea that runs our family shop, one team responsible from start to finish, scaled up for multi-site
-        programs. You make a few decisions. We manage everything else, site by site.
+        One team responsible from start to finish, scaled up for multi-site programs. You make a few decisions. We
+        manage everything else, site by site.
       </PageHero>
 
       <Section aria-label="Rollout steps">

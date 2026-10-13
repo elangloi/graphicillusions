@@ -33,7 +33,7 @@ export function ProcessTimeline({ steps }: { steps: TimelineStep[] }) {
               className={cn(
                 'grid grid-cols-[repeat(auto-fit,minmax(min(380px,100%),1fr))] gap-7 rounded-[18px] border border-border bg-card p-5 sm:p-7',
                 step.highlight &&
-                  'border-gradient border-2 border-transparent [--gb-fill:linear-gradient(160deg,#0f2440,var(--card)_60%)]',
+                  'gradient-rim border-2 border-transparent [--gb-fill:linear-gradient(160deg,#0f2440,var(--card)_60%)]',
               )}
             >
               <div className="flex flex-col gap-3.5">

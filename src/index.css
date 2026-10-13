@@ -129,7 +129,7 @@
  * Gradient hairline border. Set the fill with --gb-fill (defaults to the card
  * colour) and pair it with a `border-2 border-transparent` class.
  */
-@utility border-gradient {
+@utility gradient-rim {
   background:
     var(--gb-fill, linear-gradient(var(--card), var(--card))) padding-box,
     var(--gradient-rim) border-box;
