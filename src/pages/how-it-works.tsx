@@ -46,7 +46,6 @@ const steps: TimelineStep[] = [
     title: 'Subcontractor hand-off',
     body: `We hire and brief local installers with drawings, specs and site notes, and we stay on the job until it's done right. Our ${site.yearsInTrade} years across the tradecraft means we know what to ask for and what to check.`,
     weHandle: 'Hiring, briefing, oversight',
-    yourRole: 'None',
     photo: { label: '[Photo: installer briefing]', caption: 'Walking a local crew through the spec' },
   },
   {
